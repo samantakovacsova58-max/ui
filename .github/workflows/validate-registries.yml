@@ -12,6 +12,9 @@ on:
       - "apps/v4/public/r/registries.json"
       - "apps/v4/registry/directory.json"
 
+permissions:
+  contents: read
+
 jobs:
   check-registry-sync:
     if: github.event_name == 'pull_request'

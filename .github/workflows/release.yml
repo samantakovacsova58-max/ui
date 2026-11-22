@@ -13,6 +13,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   prerelease:
     if: ${{ github.event_name == 'pull_request' && github.repository_owner == 'shadcn-ui' && contains(github.event.pull_request.labels.*.name, '🚀 autorelease') }}
